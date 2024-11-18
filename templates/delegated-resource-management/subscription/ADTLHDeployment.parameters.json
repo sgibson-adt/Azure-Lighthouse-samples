@@ -1,0 +1,57 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "mspOfferName": {
+            "value": "ADT Azure Services"
+        },
+        "mspOfferDescription": {
+            "value": "ADT Azure Services"
+        },
+        "managedByTenantId": {
+            "value": "a7c63dc8-725d-49f4-bf7c-23fbc0171bba"
+        },
+        "authorizations": {
+            "value": [
+                {
+                "principalId": "d32d5afb-c6ae-47f9-801d-9b79a2c87020",
+                "roleDefinitionId": "cfd33db0-3dd1-45e3-aa9d-cdbdf3b6f24e",
+                "principalIdDisplayName": "Support Request Contributor"
+                },				
+				{
+                "principalId": "d32d5afb-c6ae-47f9-801d-9b79a2c87020",
+                "roleDefinitionID": "acdd72a7-3385-48ef-bd42-f606fba81ae7",
+                "principalIdDisplayName": "AfterDark Azure Lighthouse Readers"
+                },
+				{
+				"principalId": "d114978e-c139-4720-b3b7-d574728718c4",
+                "roleDefinitionId": "3e150937-b8fe-4cfb-8069-0eaf05ecd056",
+                "principalIdDisplayName": "Microsoft Sentinel Responder"
+                }
+				]
+		},
+		"eligibleAuthorizations": {
+            "value": [
+			    {
+                    "justInTimeAccessPolicy": {
+                        "multiFactorAuthProvider": "Azure",
+                        "maximumActivationDuration": "PT1H"
+                    },
+					"principalId": "ce9709cb-161f-4ff7-8ece-88a546920e99",
+					"roleDefinitionID": "91c1777a-f3dc-4fae-b103-61d183457e46",
+					"principalIdDisplayName": "AfterDark Azure Lighthouse MSRA Delete Role"
+				},
+                {
+                    "justInTimeAccessPolicy": {
+                        "multiFactorAuthProvider": "Azure",
+                        "maximumActivationDuration": "PT2H"
+					},
+                    "principalId": "ce9709cb-161f-4ff7-8ece-88a546920e99",
+					"roleDefinitionID": "b24988ac-6180-42a0-ab88-20f7382dd24c",
+					"principalIdDisplayName": "AfterDark Azure Lighthouse Contributors" 					
+				}
+			]
+		}
+	}
+	
+}
